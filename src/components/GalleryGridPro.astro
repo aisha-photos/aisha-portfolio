@@ -1,0 +1,37 @@
+---
+import "../styles/gallery-pro.css";
+
+type ImageItem = {
+  src: string;
+  alt?: string;
+  title?: string; // opcional
+};
+
+const { images = [] } = Astro.props as { images: ImageItem[] };
+
+function indexLabel(i: number){
+  // "I 001." (como en la referencia)
+  const n = String(i + 1).padStart(3, "0");
+  return `I ${n}.`;
+}
+---
+<section class="container">
+  <div class="gallery-pro">
+    {images.map((img, i) => (
+      <figure class="card">
+        <span class="badge">{indexLabel(i)}</span>
+        <img
+          src={img.src}
+          alt={img.alt ?? ""}
+          loading="lazy"
+          decoding="async"
+          sizes="(min-width: 1120px) 260px, (min-width: 680px) 33vw, 100vw"
+          data-animate="true"
+        />
+        <figcaption class="overlay">
+          <span class="meta">{img.title ?? img.alt ?? ""}</span>
+        </figcaption>
+      </figure>
+    ))}
+  </div>
+</section>
