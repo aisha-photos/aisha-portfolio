@@ -2,20 +2,25 @@
 import Base from '../../layouts/Base.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
-import GalleryGrid from '../../components/GalleryGrid.astro';
+// ⬇️ usa el nuevo
+import GalleryGridPro from '../../components/GalleryGridPro.astro';
 import data from '../../data/portfolio.json';
 
 const lang = 'es';
 const title = 'Portfolio — Aisha';
 const description = 'Selección de trabajos en retrato y fotografía editorial.';
-const images = data.images;
+const images = data.images.map((it) => ({
+  ...it,
+  // opcional: título visible distinto del alt
+  title: it.alt
+}));
 ---
 <Base lang={lang} title={title} description={description} pathEs="/es/portfolio/" pathEn="/en/portfolio/">
   <Header lang={lang} current="portfolio" pathEs="/es/portfolio/" pathEn="/en/portfolio/" />
   <main class="container" style="padding:40px 0 0">
     <h1>Portfolio</h1>
-    <p class="lead">Galería seleccionada (12 imágenes, formato 4:5).</p>
+    <p class="lead">Galería seleccionada (ratio 4:5, *hover* con nombre).</p>
   </main>
-  <GalleryGrid images={images} />
+  <GalleryGridPro images={images} />
   <Footer lang={lang} />
 </Base>
