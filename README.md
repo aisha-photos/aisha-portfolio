@@ -1,20 +1,21 @@
-# Aisha.photo
+# Aisha.photo — Portfolio (Astro)
 
-Este repositorio contiene el código de mi portfolio de fotografía.
+Minimal portfolio skeleton with ES/EN, grid gallery (4:5), and Cloudflare Pages hosting.
 
-## Sobre mí
-Soy Aisha, fotógrafa especializada en retratos y fotografía artística.  
-Este proyecto es mi espacio online para mostrar mis trabajos y facilitar el contacto.
+## Quick start
 
-## Contenido del sitio
-- **Página principal** con presentación y acceso rápido a mi trabajo.  
-- **Galería** con una selección de fotografías.  
-- **Contacto** con formulario y correo personalizado (hola@aisha.photo).  
+```bash
+npm i
+npm run dev
+```
 
-## Tecnologías
-- **HTML / CSS / JavaScript** para la estructura y estilo.  
-- **Cloudflare Pages** para el despliegue automático y gratuito.  
-- **Cloudflare Email Routing** para gestionar el correo del dominio.  
+### Deploy to Cloudflare Pages
+- Build command: `npm run build`
+- Output directory: `dist`
+- Framework preset: **Astro**
 
-## Dominio
-🌍 [aisha.photo](https://aisha.photo)
+### Images
+Place your photos in `public/images/portfolio/` and update `src/data/portfolio.json` with filenames and alt text.
+Recommended export: **WEBP** or **JPEG** at 2000–2400px long edge, ~80–85% quality.
+
+Right‑click on images is disabled as a soft protection.

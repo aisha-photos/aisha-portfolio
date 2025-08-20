@@ -1,0 +1,22 @@
+---
+import Base from '../../layouts/Base.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const lang = 'en';
+const title = 'Clients — Aisha';
+const description = 'Selected clients and collaborations.';
+---
+<Base lang={lang} title={title} description={description} pathEs="/es/clientes/" pathEn="/en/clients/">
+  <Header lang={lang} current="clients" pathEs="/es/clientes/" pathEn="/en/clients/" />
+  <main class="container" style="padding:40px 0 80px;">
+    <h1>Clients</h1>
+    <p class="lead">Coming soon: list of brands and agencies.</p>
+    <ul class="list">
+      <li>—</li>
+      <li>—</li>
+      <li>—</li>
+    </ul>
+  </main>
+  <Footer lang={lang} />
+</Base>

@@ -1,0 +1,18 @@
+---
+const { lang = 'es' } = Astro.props;
+const year = new Date().getFullYear();
+const socials = [
+  { href: 'https://www.instagram.com/aisha.niccole', label: 'Instagram' },
+  { href: 'https://www.linkedin.com/in/aisha-soto-4bba0b28b', label: 'LinkedIn' }
+];
+---
+<footer class="site">
+  <div class="container">
+    <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap: wrap;">
+      <div>© {year} Aisha. {lang === 'en' ? 'All rights reserved.' : 'Todos los derechos reservados.'}</div>
+      <div>
+        {socials.map(s => <a href={s.href} target="_blank" rel="noopener" style="margin-left:12px">{s.label}</a>)}
+      </div>
+    </div>
+  </div>
+</footer>

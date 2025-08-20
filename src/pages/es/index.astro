@@ -1,0 +1,18 @@
+---
+import Base from '../../layouts/Base.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const lang = 'es';
+const title = 'Aisha — Fotografía editorial y de retrato';
+const description = 'Portfolio de fotografía editorial y retrato. Trabajos para marcas y agencias.';
+---
+<Base lang={lang} title={title} description={description} pathEs="/es/" pathEn="/en/">
+  <Header lang={lang} current="home" pathEs="/es/" pathEn="/en/" />
+  <main class="container hero">
+    <h1>Fotografía limpia y elegante</h1>
+    <p class="lead">Retrato y editorial para marcas, agencias y equipos creativos.</p>
+    <a class="cta" href="/es/contacto/">Solicitar presupuesto</a>
+  </main>
+  <Footer lang={lang} />
+</Base>
