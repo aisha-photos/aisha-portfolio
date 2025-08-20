@@ -1,3 +1,0 @@
-User-agent: *
-Disallow:
-Sitemap: https://aisha.photo/sitemap.xml
