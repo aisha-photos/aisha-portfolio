@@ -1,0 +1,21 @@
+---
+import Base from '../../layouts/Base.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const lang = 'en';
+const title = 'Contact — Aisha';
+const description = 'Request a quote for editorial or portrait sessions.';
+---
+<Base lang={lang} title={title} description={description} pathEs="/es/contacto/" pathEn="/en/contact/">
+  <Header lang={lang} current="contact" pathEs="/es/contacto/" pathEn="/en/contact/" />
+  <main class="container" style="padding:40px 0 80px; max-width: 800px;">
+    <h1>Contact</h1>
+    <p class="lead">Have a project? Send me a message and I’ll get back to you soon.</p>
+    <p>
+      For now, please contact me on Instagram:
+      <a href="https://www.instagram.com/aisha.niccole" target="_blank" rel="noopener"> @aisha.niccole</a>.
+    </p>
+  </main>
+  <Footer lang={lang} />
+</Base>

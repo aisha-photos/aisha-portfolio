@@ -1,0 +1,18 @@
+---
+import Base from '../../layouts/Base.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const lang = 'en';
+const title = 'Aisha — Editorial & Portrait Photography';
+const description = 'Portfolio for brands and agencies. Clean and elegant photography.';
+---
+<Base lang={lang} title={title} description={description} pathEs="/es/" pathEn="/en/">
+  <Header lang={lang} current="home" pathEs="/es/" pathEn="/en/" />
+  <main class="container hero">
+    <h1>Clean & elegant photography</h1>
+    <p class="lead">Editorial and portrait work for brands, agencies and creative teams.</p>
+    <a class="cta" href="/en/contact/">Request a quote</a>
+  </main>
+  <Footer lang={lang} />
+</Base>

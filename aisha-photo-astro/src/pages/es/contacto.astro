@@ -1,0 +1,21 @@
+---
+import Base from '../../layouts/Base.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const lang = 'es';
+const title = 'Contacto — Aisha';
+const description = 'Solicitar presupuesto para sesiones de fotografía editorial o retrato.';
+---
+<Base lang={lang} title={title} description={description} pathEs="/es/contacto/" pathEn="/en/contact/">
+  <Header lang={lang} current="contact" pathEs="/es/contacto/" pathEn="/en/contact/" />
+  <main class="container" style="padding:40px 0 80px; max-width: 800px;">
+    <h1>Contacto</h1>
+    <p class="lead">¿Tienes un proyecto? Envíame un mensaje y te respondo pronto.</p>
+    <p>
+      Por ahora, contáctame por Instagram:
+      <a href="https://www.instagram.com/aisha.niccole" target="_blank" rel="noopener"> @aisha.niccole</a>.
+    </p>
+  </main>
+  <Footer lang={lang} />
+</Base>
